@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="UtilityAction" load_steps=5 format=3 uid="uid://5x3dqir88tha"]
+
+[ext_resource type="Script" uid="uid://cd6mfytducfvh" path="res://utils/utility_consideration.gd" id="1_kri8a"]
+[ext_resource type="Resource" uid="uid://dkbqdtg3kb2w6" path="res://utils/considerations/hunger.tres" id="2_86wro"]
+[ext_resource type="Script" uid="uid://3q3pvl51yb3e" path="res://utils/utility_actions.gd" id="2_ottx2"]
+[ext_resource type="Resource" uid="uid://dkf3mno1olxvs" path="res://utils/considerations/food_in_range.tres" id="3_86wro"]
+
+[resource]
+script = ExtResource("2_ottx2")
+action_name = "Foragings"
+considerations = Array[ExtResource("1_kri8a")]([ExtResource("2_86wro"), ExtResource("3_86wro")])
+weights = Array[float]([1.0, 10.0])
+const_add = -10.0
+aggregation_type = 0
+execute_method = &"forage"
+metadata/_custom_type_script = "uid://3q3pvl51yb3e"

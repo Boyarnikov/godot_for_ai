@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="UtilityAction" load_steps=6 format=3 uid="uid://bq1268c1e6w6f"]
+
+[ext_resource type="Script" uid="uid://cd6mfytducfvh" path="res://utils/utility_consideration.gd" id="1_3jxmc"]
+[ext_resource type="Script" uid="uid://3q3pvl51yb3e" path="res://utils/utility_actions.gd" id="2_5n08h"]
+[ext_resource type="Resource" uid="uid://dkbqdtg3kb2w6" path="res://utils/considerations/hunger.tres" id="2_i4q65"]
+[ext_resource type="Resource" uid="uid://4xu5smsl14ao" path="res://utils/considerations/energy.tres" id="3_me47y"]
+[ext_resource type="Resource" uid="uid://dkf3mno1olxvs" path="res://utils/considerations/food_in_range.tres" id="4_me47y"]
+
+[resource]
+script = ExtResource("2_5n08h")
+action_name = "Finding Food"
+considerations = Array[ExtResource("1_3jxmc")]([ExtResource("2_i4q65"), ExtResource("3_me47y"), ExtResource("4_me47y")])
+weights = Array[float]([0.5, 0.5, -10.0])
+const_add = 0.0
+aggregation_type = 0
+execute_method = &"seek_food"
+metadata/_custom_type_script = "uid://3q3pvl51yb3e"

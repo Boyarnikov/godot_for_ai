@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UtilityConsideration" load_steps=3 format=3 uid="uid://dkf3mno1olxvs"]
+
+[ext_resource type="Script" uid="uid://cd6mfytducfvh" path="res://utils/utility_consideration.gd" id="1_ejq1o"]
+
+[sub_resource type="Curve" id="Curve_bso16"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.0526316, 1), 0.0, 0.0, 0, 0, Vector2(0.0607287, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[resource]
+script = ExtResource("1_ejq1o")
+input_axis = &"distance_to_food"
+min_value = 0.0
+max_value = 100.0
+response_curve = SubResource("Curve_bso16")
+metadata/_custom_type_script = "uid://cd6mfytducfvh"

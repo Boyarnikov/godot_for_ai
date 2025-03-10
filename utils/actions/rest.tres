@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UtilityAction" load_steps=4 format=3 uid="uid://bsaetploygpca"]
+
+[ext_resource type="Script" uid="uid://cd6mfytducfvh" path="res://utils/utility_consideration.gd" id="1_7eafh"]
+[ext_resource type="Script" uid="uid://3q3pvl51yb3e" path="res://utils/utility_actions.gd" id="2_ccvkh"]
+[ext_resource type="Resource" uid="uid://4xu5smsl14ao" path="res://utils/considerations/energy.tres" id="2_q0m28"]
+
+[resource]
+script = ExtResource("2_ccvkh")
+action_name = "Rest"
+considerations = Array[ExtResource("1_7eafh")]([ExtResource("2_q0m28")])
+weights = Array[float]([1.0])
+const_add = 0.0
+aggregation_type = 0
+execute_method = &"rest"
+metadata/_custom_type_script = "uid://3q3pvl51yb3e"

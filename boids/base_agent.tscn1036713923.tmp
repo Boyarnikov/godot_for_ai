@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhu3hcx7dvabn"]
+
+[ext_resource type="Script" uid="uid://bfsvpotkuvp6h" path="res://boids/base_agent.gd" id="1_tfg3b"]
+[ext_resource type="Script" uid="uid://cipvn8ep4fndu" path="res://boids/steering_manager.gd" id="2_qgy38"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qgy38"]
+
+[node name="BaseAgent" type="CharacterBody2D"]
+script = ExtResource("1_tfg3b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qgy38")
+
+[node name="SteeringManager" type="Node" parent="."]
+script = ExtResource("2_qgy38")

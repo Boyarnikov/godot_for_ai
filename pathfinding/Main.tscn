@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8hpjp0qklv62"]
+
+[ext_resource type="Script" uid="uid://dqan1sf4gimda" path="res://pathfinding/main.gd" id="1_rkaxx"]
+[ext_resource type="PackedScene" uid="uid://cmhri5r2umvln" path="res://pathfinding/GridCell.tscn" id="2_gvick"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_rkaxx")
+grid_cell_scene = ExtResource("2_gvick")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+
+[node name="GenerateButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1039.0
+offset_top = 22.0
+offset_right = 1119.0
+offset_bottom = 53.0
+text = "Generate
+random
+map"
+
+[node name="ToggleAlgo" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1039.0
+offset_top = 115.0
+offset_right = 1119.0
+offset_bottom = 192.0
+text = "dijkstra"

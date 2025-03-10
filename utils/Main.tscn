@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyfybpll68hf2"]
+
+[ext_resource type="PackedScene" uid="uid://dyw7ttfnqjarj" path="res://utils/agent.tscn" id="1_xla8m"]
+[ext_resource type="PackedScene" uid="uid://b7ufch6q62y6j" path="res://utils/DebugUI.tscn" id="6_he5hh"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Agent" parent="." instance=ExtResource("1_xla8m")]
+position = Vector2(53, 45)
+
+[node name="DebugUi" parent="Agent" instance=ExtResource("6_he5hh")]
+agent = NodePath("..")
+tracked_properties = Array[String](["hunger", "distance_to_food", "energy"])

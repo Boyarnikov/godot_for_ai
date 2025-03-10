@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmhri5r2umvln"]
+
+[ext_resource type="Script" uid="uid://k7ogjj16npuv" path="res://pathfinding/grid_cell.gd" id="1_q2s1n"]
+
+[node name="GridCell" type="ColorRect"]
+script = ExtResource("1_q2s1n")

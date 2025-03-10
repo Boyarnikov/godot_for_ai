@@ -1,0 +1,15 @@
+[gd_scene load_steps=7 format=3 uid="uid://dyw7ttfnqjarj"]
+
+[ext_resource type="Script" uid="uid://d4ijj6nh6n6fe" path="res://utils/agent.gd" id="1_edc5l"]
+[ext_resource type="Script" uid="uid://8gghgtnqjr0a" path="res://utils/utility_reasoner.gd" id="2_wt0g1"]
+[ext_resource type="Script" uid="uid://3q3pvl51yb3e" path="res://utils/utility_actions.gd" id="3_5ifi7"]
+[ext_resource type="Resource" uid="uid://5x3dqir88tha" path="res://utils/actions/forage.tres" id="4_rc1bk"]
+[ext_resource type="Resource" uid="uid://bsaetploygpca" path="res://utils/actions/rest.tres" id="5_7pjrx"]
+[ext_resource type="Resource" uid="uid://bq1268c1e6w6f" path="res://utils/actions/find_food.tres" id="6_skoaj"]
+
+[node name="Agent" type="Node2D"]
+script = ExtResource("1_edc5l")
+
+[node name="Reasoner" type="Node" parent="."]
+script = ExtResource("2_wt0g1")
+actions = Array[ExtResource("3_5ifi7")]([ExtResource("4_rc1bk"), ExtResource("5_7pjrx"), ExtResource("6_skoaj")])

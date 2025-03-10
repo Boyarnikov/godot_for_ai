@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UtilityConsideration" load_steps=3 format=3 uid="uid://4xu5smsl14ao"]
+
+[ext_resource type="Script" uid="uid://cd6mfytducfvh" path="res://utils/utility_consideration.gd" id="1_0lqr3"]
+
+[sub_resource type="Curve" id="Curve_0lqr3"]
+_data = [Vector2(0, 1), 0.0, -1.32869, 0, 1, Vector2(0.202429, 0.731034), 0.0, 0.0, 0, 0, Vector2(0.408907, 0.49569), -0.316355, -0.316355, 0, 0, Vector2(0.809717, 0.484483), 0.0, 0.0, 0, 0, Vector2(1, 0.036207), -2.35583, 0.0, 1, 0]
+point_count = 5
+
+[resource]
+script = ExtResource("1_0lqr3")
+input_axis = &"energy"
+min_value = 0.0
+max_value = 100.0
+response_curve = SubResource("Curve_0lqr3")
+metadata/_custom_type_script = "uid://cd6mfytducfvh"

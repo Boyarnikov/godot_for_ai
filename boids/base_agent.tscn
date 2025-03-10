@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhu3hcx7dvabn"]
+
+[ext_resource type="Script" uid="uid://bfsvpotkuvp6h" path="res://boids/base_agent.gd" id="1_tfg3b"]
+[ext_resource type="Texture2D" uid="uid://c16ylwr63qnnu" path="res://boids/sprites/boid.png" id="2_igr0a"]
+[ext_resource type="Script" uid="uid://cipvn8ep4fndu" path="res://boids/steering_manager.gd" id="2_qgy38"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qgy38"]
+radius = 3.16228
+
+[node name="BaseAgent" type="CharacterBody2D"]
+script = ExtResource("1_tfg3b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.430233, 0.462025)
+texture = ExtResource("2_igr0a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qgy38")
+
+[node name="SteeringManager" type="Node" parent="."]
+script = ExtResource("2_qgy38")

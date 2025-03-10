@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UtilityConsideration" load_steps=3 format=3 uid="uid://dkbqdtg3kb2w6"]
+
+[ext_resource type="Script" uid="uid://cd6mfytducfvh" path="res://utils/utility_consideration.gd" id="1_002kv"]
+
+[sub_resource type="Curve" id="Curve_002kv"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.29, 0), 0.0, 0.0, 0, 0, Vector2(0.49, 0.460674), 0.0, 0.0, 0, 0, Vector2(0.745, 0.47191), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[resource]
+script = ExtResource("1_002kv")
+input_axis = &"hunger"
+min_value = 0.0
+max_value = 100.0
+response_curve = SubResource("Curve_002kv")
+metadata/_custom_type_script = "uid://cd6mfytducfvh"

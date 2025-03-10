@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6xhkvlo1g0of"]
+
+[ext_resource type="PackedScene" uid="uid://cub6oytr305v2" path="res://boids/utils/agent_spawner.tscn" id="1_22x1f"]
+[ext_resource type="PackedScene" uid="uid://bhu3hcx7dvabn" path="res://boids/base_agent.tscn" id="2_8nasm"]
+[ext_resource type="Script" uid="uid://biig77su7dm85" path="res://boids/utils/target.gd" id="2_vxtuk"]
+[ext_resource type="Texture2D" uid="uid://phbi47rd5tu1" path="res://boids/sprites/target.png" id="4_8nasm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vxtuk"]
+radius = 187.067
+
+[node name="Root" type="Node2D"]
+
+[node name="AgentSpawner" parent="." instance=ExtResource("1_22x1f")]
+agent_scene = ExtResource("2_8nasm")
+
+[node name="Target" type="Marker2D" parent="AgentSpawner"]
+position = Vector2(750, 298)
+script = ExtResource("2_vxtuk")
+
+[node name="Sprite2D" type="Sprite2D" parent="AgentSpawner/Target"]
+texture = ExtResource("4_8nasm")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(259, 292)
+shape = SubResource("CircleShape2D_vxtuk")
+debug_color = Color(0.916841, 0.113416, 0.646772, 0.42)
